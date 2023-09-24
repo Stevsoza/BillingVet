@@ -6,56 +6,58 @@ package com.steven.practicestev.seller;
 
 import com.steven.practicestev.person.Person;
 import jakarta.persistence.*;
-import java.sql.Date;
+// import java.sql.Date;
 
 /**
  *
  * @author Steven
  */
 @Entity
-@Table(name="seller")
-public class Seller extends Person{
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-    private String password;
-    private String username;
-    
-    // public Seller(int id, String name, String lastName, String secondLastname, Date birthDate, String phone, String email, String password, String username) {
-    //     super(name,lastName,secondLastname, birthDate,phone, email);
-    //     this.id = id;
-    //     this.password = password;
-    //     this.username = username;
-    // }
-    
-    // public seller(){
-    //     super();
-    //     id = 0;
-    //     password = "";
-    //     user = "";
-    // }
-    
-    public Long getId() {
-        return id;
-    }
+@Table(name = "seller")
+public class Seller extends Person {
+   @Id
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   private Long id;
+   private String password;
+   private String username;
 
-    // public void setId(int id) {
-    //     this.id = id;
-    // }
+   // public Seller(int id, String name, String lastName, String secondLastname,
+   // Date birthDate, String phone, String email, String password, String username)
+   // {
+   // super(name,lastName,secondLastname, birthDate,phone, email);
+   // this.id = id;
+   // this.password = password;
+   // this.username = username;
+   // }
 
-    public String getPassword() {
-        return password;
-    }
+   // public seller(){
+   // super();
+   // id = 0;
+   // password = "";
+   // user = "";
+   // }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+   public Long getId() {
+      return id;
+   }
 
-    public String getUsername() {
-        return username;
-    }
+   // public void setId(int id) {
+   // this.id = id;
+   // }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+   public String getPassword() {
+      return password;
+   }
+
+   public void setPassword(String password) {
+      this.password = password;
+   }
+
+   public String getUsername() {
+      return username;
+   }
+
+   public void setUsername(String username) {
+      this.username = username;
+   }
 }

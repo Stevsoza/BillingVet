@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.steven.practicestev.person;
-import java.sql.Date;
-import java.time.LocalDate;
-import jakarta.persistence.MappedSuperclass;
 
+import java.sql.Date;
+// import java.time.LocalDate;
+import jakarta.persistence.MappedSuperclass;
 
 /**
  *
@@ -14,89 +14,90 @@ import jakarta.persistence.MappedSuperclass;
  */
 @MappedSuperclass
 public abstract class Person {
-    
-    //attributes
-    private String name;
-    private String lastname;
-    private String secondlastname;
-    private Date birthdate;
-    private String phone;
-    private String email;
-    private boolean exists;
-    
-    // public Person(String name, String lastName, String secondLastname, Date birthDate, String phone, String email) {
-    //     this.name = name;
-    //     this.lastName = lastName;
-    //     this.secondLastname = secondLastname;
-    //     this.birthDate = birthDate;
-    //     this.phone = phone;
-    //     this.email = email;
-    //     this.exists = true;
-    // }
-    
-    // public Person(){
-    //     name = "";
-    //     lastName = "";
-    //     secondLastname = "";
-    //     birthDate = Date.valueOf(LocalDate.MIN);
-    //     phone = "";
-    //     email = "";
-    //     exists = false;
-    // }
-    
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+   // attributes
+   private String name;
+   private String lastname;
+   private String secondlastname;
+   private Date birthdate;
+   private String phone;
+   private String email;
+   private boolean exists;
 
-    public String getLastname() {
-        return lastname;
-    }
+   // public Person(String name, String lastName, String secondLastname, Date
+   // birthDate, String phone, String email) {
+   // this.name = name;
+   // this.lastName = lastName;
+   // this.secondLastname = secondLastname;
+   // this.birthDate = birthDate;
+   // this.phone = phone;
+   // this.email = email;
+   // this.exists = true;
+   // }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+   // public Person(){
+   // name = "";
+   // lastName = "";
+   // secondLastname = "";
+   // birthDate = Date.valueOf(LocalDate.MIN);
+   // phone = "";
+   // email = "";
+   // exists = false;
+   // }
 
-    public String getSecondlastname() {
-        return secondlastname;
-    }
+   public String getName() {
+      return name;
+   }
 
-    public void setSecondlastname(String secondlastname) {
-        this.secondlastname = secondlastname;
-    }
+   public void setName(String name) {
+      this.name = name;
+   }
 
-    public Date getBirthdate() {
-        return birthdate;
-    }
+   public String getLastname() {
+      return lastname;
+   }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
-    }
+   public void setLastname(String lastname) {
+      this.lastname = lastname;
+   }
 
-    public String getPhone() {
-        return phone;
-    }
+   public String getSecondlastname() {
+      return secondlastname;
+   }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+   public void setSecondlastname(String secondlastname) {
+      this.secondlastname = secondlastname;
+   }
 
-    public String getEmail() {
-        return email;
-    }
-    
-    public void setEmail(String email) {
-        this.email = email;
-    }
+   public Date getBirthdate() {
+      return birthdate;
+   }
 
-    public boolean isExists() {
-        return exists;
-    }
+   public void setBirthdate(Date birthdate) {
+      this.birthdate = birthdate;
+   }
 
-    public void setExists(boolean exists) {
-        this.exists = exists;
-    }
+   public String getPhone() {
+      return phone;
+   }
+
+   public void setPhone(String phone) {
+      this.phone = phone;
+   }
+
+   public String getEmail() {
+      return email;
+   }
+
+   public void setEmail(String email) {
+      this.email = email;
+   }
+
+   public boolean isExists() {
+      return exists;
+   }
+
+   public void setExists(boolean exists) {
+      this.exists = exists;
+   }
 }
