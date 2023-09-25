@@ -1,0 +1,33 @@
+$secondary: rgb(42, 52, 71);
+
+#nav {
+   display: flex;
+   flex-direction: column;
+   background-color: $secondary;
+   border-radius: 5px;
+   width: 15rem;
+
+   // gap: 2rem;
+   a {
+      font-size: 0.8rem;
+      display: flex;
+      color: rgb(216, 216, 216);
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+
+      &:hover {
+         color: rgb(55, 55, 55);
+         border-radius: 5px;
+         background-color: rgb(146, 146, 146) !important;
+      }
+   }
+
+}
+
+
+#cont {
+   color: white;
+   border-radius: 5px;
+   padding: 1rem 1.5rem;
+   background-color: rgb(42, 52, 71);
+}

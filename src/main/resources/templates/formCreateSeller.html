@@ -1,61 +1,67 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
+<head th:replace="~{fragments :: html_head(title='Create Seller')}"> </head>
+
 <head>
-    <title>List users</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+   <link rel="stylesheet" th:href="@{/css/home.css}" />
 </head>
 
-<body class="container vh-100 d-flex">
-    <div class="row shadow p-5 main my-auto lineer">
-        <div class="d-flex justify-content-center">
-            <h2>Submit a new Seller</h2>
-        </div>
-        <form class="form" th:action="@{/seller/formSeller}" method="post" th:object="${seller}">
-            <div class="inputs">
-                <div>
-                    <input type="text" th:field="*{name}" required="required" />
-                    <span>Name:</span>
-                </div>
-                <div>
-                    <input type="text" th:field="*{lastname}" required="required" />
-                    <span>Last name:</span>
-                </div>
-                <div>
-                    <input type="text" th:field="*{secondlastname}" required="required" />
-                    <span>Second last name:</span>
-                </div>
-                <div>
-                    <input type="text" th:field="*{email}" required="required" />
-                    <span>Email:</span>
-                </div>
-                <div>
-                    <input type="date" th:field="*{birthdate}" />
-                    <span>Birth date:</span>
-                </div>
-                <div>
-                    <input type="tel" th:field="*{phone}" required="required" />
-                    <span>Phone:</span>
-                </div>
-                <div>
-                    <input type="text" th:field="*{username}" required="required" />
-                    <span>Username:</span>
-                </div>
-                <div>
-                    <input type="password" th:field="*{password}" required="required" />
-                    <span>Password:</span>
-                </div>
-            </div>
-            <div class="button-div">
-                <input class="my-btn" type="submit" value="Submit" />
-            </div>
-        </form>
-    </div>
+<body class="vh-100 col p-2 bg-secondary">
+   <div class="m-1 row p-0 h-100 gap-2">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+      <div th:replace="~{fragments::nav}"></div>
+
+      <div id="cont" class="col h-100 p-3">
+         <div class="container h-100 p-5 main my-auto">
+            <div class="d-flex justify-content-center">
+               <h2>Submit a new Seller</h2>
+            </div>
+            <form class="form" th:action="@{/seller/formSeller}" method="post" th:object="${seller}">
+               <div class="inputs">
+                  <div>
+                     <input type="text" th:field="*{name}" required="required" />
+                     <span>Name:</span>
+                  </div>
+                  <div>
+                     <input type="text" th:field="*{lastname}" required="required" />
+                     <span>Last name:</span>
+                  </div>
+                  <div>
+                     <input type="text" th:field="*{secondlastname}" required="required" />
+                     <span>Second last name:</span>
+                  </div>
+                  <div>
+                     <input type="text" th:field="*{email}" required="required" />
+                     <span>Email:</span>
+                  </div>
+                  <div>
+                     <input type="date" th:field="*{birthdate}" />
+                     <span>Birth date:</span>
+                  </div>
+                  <div>
+                     <input type="tel" th:field="*{phone}" required="required" />
+                     <span>Phone:</span>
+                  </div>
+                  <div>
+                     <input type="text" th:field="*{username}" required="required" />
+                     <span>Username:</span>
+                  </div>
+                  <div>
+                     <input type="password" th:field="*{password}" required="required" />
+                     <span>Password:</span>
+                  </div>
+               </div>
+               <div class="button-div">
+                  <input class="my-btn" type="submit" value="Submit" />
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

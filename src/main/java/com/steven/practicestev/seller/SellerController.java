@@ -49,7 +49,7 @@ public class SellerController {
       return new ModelAndView("redirect:/seller/success");
    }
 
-   @GetMapping("/success")
+   @GetMapping("/seller/success")
    public ModelAndView successSave() {
       return new ModelAndView("success");
    }
