@@ -2,12 +2,6 @@ package com.steven.practicestev.user;
 
 import java.util.List;
 import java.util.Optional;
-// import java.io.*;
-
-// import org.springframework.stereotype.Repository;
-
-// import com.steven.practicestev.user.UserService;
-// import com.steven.practicestev.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
