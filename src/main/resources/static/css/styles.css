@@ -61,6 +61,16 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (width < 700px) {
+  .inputs {
+    width: 100%;
+    min-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .inputs div {
   width: 30%;
   display: -webkit-box;
@@ -76,6 +86,11 @@
           flex-direction: column;
   margin: auto;
   position: relative;
+}
+@media (width < 700px) {
+  .inputs div {
+    width: 100%;
+  }
 }
 .inputs div span {
   padding: 10px;

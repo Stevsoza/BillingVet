@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 #nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,6 +13,11 @@
   background-color: rgb(42, 52, 71);
   border-radius: 5px;
   width: 15rem;
+}
+@media (width < 700px) {
+  #nav {
+    display: none;
+  }
 }
 #nav a {
   font-size: 0.8rem;
@@ -30,4 +39,110 @@
   border-radius: 5px;
   padding: 1rem 1.5rem;
   background-color: rgb(42, 52, 71);
+}
+
+.table-no-color {
+  border-radius: 1rem !important;
+  border-color: rgb(186, 176, 158) !important;
+  border-width: 1px !important;
+  background-color: transparent !important;
+  color: rgb(186, 176, 158);
+}
+.table-no-color * {
+  border-radius: 1rem !important;
+  color: rgb(186, 176, 158) !important;
+  border-color: grey;
+  background-color: transparent !important;
+}
+.table-no-color td {
+  height: 3rem !important;
+}
+.table-no-color .option-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: rgb(186, 176, 158) !important;
+  border-radius: 0.5rem !important;
+  padding: 5px;
+  color: rgb(42, 52, 71) !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+.table-no-color .option-menu {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem !important;
+  background-color: rgb(186, 176, 158) !important;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0px;
+  right: 105%;
+  width: 7rem;
+  padding: 0.3rem !important;
+  z-index: 99;
+  cursor: initial;
+}
+.table-no-color .option-menu * {
+  font-size: 0.9rem;
+  color: rgb(42, 52, 71) !important;
+}
+.table-no-color .option-menu a {
+  padding: 0.2rem;
+}
+.table-no-color .option-menu .link-menu {
+  cursor: pointer !important;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px !important;
+}
+.table-no-color .option-menu .link-menu:hover {
+  background-color: rgb(42, 52, 71) !important;
+  color: rgb(186, 176, 158) !important;
+}
+
+.cont-table {
+  border-radius: 1rem;
+  border: 1px solid rgb(186, 176, 158);
+}
+
+.hide {
+  display: none !important;
+}
+
+body {
+  height: 100vh;
+}
+@media (width < 700px) {
+  body {
+    height: auto;
+  }
+}
+body > div {
+  height: 100%;
+}
+@media (width < 700px) {
+  body > div {
+    height: auto;
+  }
 }/*# sourceMappingURL=home.css.map */

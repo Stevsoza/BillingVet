@@ -83,4 +83,11 @@ public class SellerController {
    public void deleteSeller(@PathVariable Long id) {
       sellerService.deleteSeller(id);
    }
+
+   @GetMapping("/seller/update/{id}")
+   public ModelAndView updateSeller(@PathVariable Long id) {
+      Seller seller = sellerRepository.findById(id).orElse(null);
+
+      return new ModelAndView("updateSeller").addObject("seller", seller);
+   }
 }

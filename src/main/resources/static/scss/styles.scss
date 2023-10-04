@@ -60,7 +60,18 @@ $secondary: rgb(42, 52, 71);
    gap: 0.8rem;
    flex-wrap: wrap;
 
+   @media(width < 700px) {
+      width: 100%;
+      min-width: 100%;
+      flex-direction: column;
+   }
+
    div {
+
+      @media(width < 700px) {
+         width: 100%;
+      }
+
       width: 30%;
       display: flex;
       flex-grow: 1;

@@ -1,4 +1,9 @@
 $secondary: rgb(42, 52, 71);
+$wheat: rgb(186, 176, 158);
+
+a {
+   text-decoration: none;
+}
 
 #nav {
    display: flex;
@@ -6,6 +11,10 @@ $secondary: rgb(42, 52, 71);
    background-color: $secondary;
    border-radius: 5px;
    width: 15rem;
+
+   @media(width < 700px) {
+      display: none;
+   }
 
    // gap: 2rem;
    a {
@@ -30,4 +39,111 @@ $secondary: rgb(42, 52, 71);
    border-radius: 5px;
    padding: 1rem 1.5rem;
    background-color: rgb(42, 52, 71);
+
+}
+
+
+.table-no-color {
+   // border-style: solid;
+   border-radius: 1rem !important;
+   border-color: $wheat !important;
+   border-width: 1px !important;
+   background-color: transparent !important;
+   color: $wheat;
+
+   & * {
+      border-radius: 1rem !important;
+      color: $wheat !important;
+      border-color: grey;
+      background-color: transparent !important;
+   }
+
+
+   td {
+      height: 3rem !important;
+   }
+
+   .option-button {
+      display: flex;
+      user-select: none;
+      background-color: $wheat !important;
+      border-radius: 0.5rem !important;
+      // width: 50%;
+      padding: 5px;
+      color: $secondary !important;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      position: relative;
+   }
+
+   .option-menu {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem !important;
+      background-color: $wheat !important;
+      // min-height: 200px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 0px;
+      right: 105%;
+      width: 7rem;
+      padding: 0.3rem !important;
+      z-index: 99;
+      cursor: initial;
+
+      & * {
+         font-size: 0.9rem;
+         color: $secondary !important;
+      }
+
+      a {
+
+         padding: 0.2rem;
+
+      }
+
+      .link-menu {
+         cursor: pointer !important;
+         width: 100%;
+         text-align: center;
+         padding: 1rem;
+         border-radius: 5px !important;
+
+         &:hover {
+            background-color: $secondary !important;
+            color: $wheat !important;
+         }
+      }
+
+   }
+
+}
+
+.cont-table {
+   border-radius: 1rem;
+   border: 1px solid $wheat;
+}
+
+.hide {
+   display: none !important;
+}
+
+body {
+   height: 100vh;
+
+   @media(width < 700px) {
+      height: auto;
+   }
+
+   &>div {
+      height: 100%;
+
+      @media(width < 700px) {
+         height: auto;
+
+      }
+   }
 }
