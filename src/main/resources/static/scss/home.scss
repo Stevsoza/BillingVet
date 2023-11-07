@@ -5,6 +5,10 @@ a {
    text-decoration: none;
 }
 
+.bg-blue-dark{
+   background-color: $secondary;
+}
+
 #nav {
    display: flex;
    flex-direction: column;
@@ -12,7 +16,7 @@ a {
    border-radius: 5px;
    width: 15rem;
 
-   @media(width < 700px) {
+   @media(width < 768px) {
       display: none;
    }
 
@@ -39,7 +43,7 @@ a {
    border-radius: 5px;
    padding: 1rem 1.5rem;
    background-color: rgb(42, 52, 71);
-
+   width: calc(100% - 15rem);
 }
 
 

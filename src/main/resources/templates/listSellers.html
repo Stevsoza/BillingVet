@@ -7,10 +7,49 @@
 </head>
 
 <body class="vh-100 col p-2 bg-secondary">
-   <div class="m-1 row p-0 h-100 gap-2">
-      <div th:replace="~{fragments::nav}"></div>
-      <div id="cont" class="col h-100 p-3">
-         <div class="cont-table container rounded mh-50">
+   <div class="m-1 row p-0 h-100 gap-2 position-relative">
+      <nav class="position-relative navbar navbar-dark bg-dark d-sm-none">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+               data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+               aria-labelledby="offcanvasDarkNavbarLabel">
+               <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                     aria-label="Close"></button>
+               </div>
+               <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Billing</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">List Users</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Add User</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/showSellers}">List Sellers</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/seller/createSeller}">Add Seller</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div th:replace="~{fragments :: nav}"></div>
+      <div id="cont" class="col h-100 p-3 mt-sm-5">
+         <div class="cont-table container rounded mh-50 overflow-x-auto">
             <table class="table table-no-color table-responsive">
                <thead>
                   <tr>
@@ -45,9 +84,7 @@
       </div>
    </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+   <div th:replace="~{fragments::scripts}"></div>
    <script>
       function deleteSell(seller) {
          const requestOptions = {
@@ -57,7 +94,7 @@
             },
          }
 
-         fetch(`/seller/${seller}`, requestOptions)
+         fetch(`/javatest/seller/${seller}`, requestOptions)
             .then(response => response.json())
             .then(data => console.log(data))
       }

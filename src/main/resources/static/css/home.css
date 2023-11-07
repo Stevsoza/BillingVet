@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+.bg-blue-dark {
+  background-color: rgb(42, 52, 71);
+}
+
 #nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +18,7 @@ a {
   border-radius: 5px;
   width: 15rem;
 }
-@media (width < 700px) {
+@media (width < 768px) {
   #nav {
     display: none;
   }
@@ -39,6 +43,7 @@ a {
   border-radius: 5px;
   padding: 1rem 1.5rem;
   background-color: rgb(42, 52, 71);
+  width: calc(100% - 15rem);
 }
 
 .table-no-color {
