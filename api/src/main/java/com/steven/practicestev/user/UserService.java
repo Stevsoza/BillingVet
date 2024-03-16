@@ -32,6 +32,7 @@ public class UserService {
             User existingUser = user.get();
             existingUser.setfirstName(userDetails.getfirstName());
             existingUser.setlastName(userDetails.getlastName());
+            existingUser.setage(userDetails.getage());
             return userRepository.save(existingUser);
         }
         return null;
